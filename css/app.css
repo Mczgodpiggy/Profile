@@ -5274,6 +5274,7 @@ figcaption{
 }
 .contact-button.contact-button-dark:hover{
     border-color:#ff9999
+    box-shadow: 4px 4px 2px 2px #ff9999;
 }
 .contact-button.contact-button-colorful{
     background-color:#6100bb;

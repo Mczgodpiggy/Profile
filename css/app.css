@@ -14178,7 +14178,7 @@ html.w-mod-js [data-ix=nav-dropdown]{
     .new-link-buttons-wrapper{
         flex-direction:column;
         align-items:flex-start;
-        margin-left:10px
+        margin-left:10px;
         transform:rotate(10deg)
     }
     .editor-upload-button{

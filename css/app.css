@@ -5273,7 +5273,7 @@ figcaption{
     border-color:#e4e4e4
 }
 .contact-button.contact-button-dark:hover{
-    border-color:#ff9999
+    border-color:#ff9999;
     box-shadow: 4px 4px 2px 2px #ff9999;
 }
 .contact-button.contact-button-colorful{

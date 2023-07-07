@@ -15131,7 +15131,7 @@ input,textarea{
 }
 .link-button:hover>.link-arrow-wrapper{
     -webkit-transform:translateX(5px) translateY(0) translateZ(0);
-    transform:translateX(5px) translateY(0) translateZ(0) rotate(28deg)
+    transform:translateX(5px) translateY(0) translateZ(0) rotate(-28deg)
 }
 .link-button:hover>.link-icon-float{
     -webkit-transform:translateX(0) translateY(-5px) translateZ(0);

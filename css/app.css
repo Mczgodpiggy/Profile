@@ -15131,11 +15131,11 @@ input,textarea{
 }
 .link-button:hover>.link-arrow-wrapper{
     -webkit-transform:translateX(5px) translateY(0) translateZ(0);
-    transform:translateX(5px) translateY(0) translateZ(0) rotate(-28deg)
+    transform:translateX(5px) translateY(0) translateZ(0) rotate(-18deg)
 }
 .link-button:hover>.link-icon-float{
     -webkit-transform:translateX(0) translateY(-5px) translateZ(0);
-    transform:translateX(0) translateY(-5px) translateZ(0)
+    transform:translateX(50px) translateY(-5px) translateZ(0) rotate(360deg)
 }
 .social-oneclick-wrapper.social-oneclick-wrapper-fade{
     opacity:0;

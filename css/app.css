@@ -15135,7 +15135,7 @@ input,textarea{
 }
 .link-button:hover>.link-icon-float{
     -webkit-transform:translateX(0) translateY(-5px) translateZ(0);
-    transform:translateX(-50px) translateY(-5px) translateZ(0) rotate(-360deg)
+    transform:translateX(-28px) translateY(-5px) translateZ(0) rotate(-360deg)
 }
 .social-oneclick-wrapper.social-oneclick-wrapper-fade{
     opacity:0;

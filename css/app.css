@@ -354,7 +354,7 @@ figcaption{
 .location-icon{
     width:20px;
     height:20px;
-    margin-right:8px
+    margin-right:8px;
 }
 .location-icon.location-icon-long{
     margin-bottom:5px;
@@ -634,10 +634,13 @@ figcaption{
     padding-bottom:25px;
     display:flex;
     position:relative;
-    box-shadow:0 18px 45px rgba(0,0,0,.13)
+    box-shadow:0 18px 45px rgb(255 174 174 / 81%)
+}
+.profile-info-wrapper:hover>.profile-info-wrapper{
+    box-shadow:0 20px 47px rgb(252 183 183 / 81%)
 }
 .profile-info-wrapper.profile-info-wrapper-dark{
-    color:#fff;
+    color:#ff9999;
     background-color:#333
 }
 .profile-info-wrapper.profile-info-wrapper-msim{
@@ -823,7 +826,7 @@ figcaption{
     border-radius:50%;
     align-items:flex-end;
     overflow:hidden;
-    box-shadow:0 8px 40px rgba(0,0,0,.21)
+    box-shadow:0 8px 40px rgb(255 156 156 / 55%)
 }
 .profile-image-wrapper.profile-image-wrapper-msim{
     width:120px;
@@ -11763,6 +11766,9 @@ html.w-mod-js [data-ix=nav-dropdown]{
     .profile-image{
         height:150px
     }
+    .profile-image:hover>.profile-image-wrapper{
+        transform: translateY(-5);
+    }
     .profile-location-box,.profile-name{
         margin-bottom:15px
     }
@@ -13785,7 +13791,9 @@ html.w-mod-js [data-ix=nav-dropdown]{
     }
     .profile-bio{
         max-width:320px;
-        margin-bottom:15px
+        margin-bottom:15px;
+        text-shadow: 0 0 #ff9999;
+        box-shadow: 0px 0px 1px 1px #ff9999
     }
     .profile-side-button{
         height:21px
@@ -15132,8 +15140,11 @@ input,textarea{
     transition:transform .3s ease
 }
 .link-button:hover>.link-arrow-wrapper{
-    -webkit-transform:translateX(5px) translateY(0) translateZ(0);
+    -webkit-transform:translateX(5px) translateY(0) translateZ(0) rotate(18deg);
     transform:translateX(5px) translateY(0) translateZ(0) rotate(-18deg)
+}
+.link-button:hover{
+    box-shadow:0 14px 30px -5px rgba(0,0,0,.13)
 }
 .link-button:hover>.link-icon-float{
     -webkit-transform:translateX(0) translateY(-5px) translateZ(0);

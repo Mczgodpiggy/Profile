@@ -634,10 +634,35 @@ figcaption{
     padding-bottom:25px;
     display:flex;
     position:relative;
-    box-shadow:0 18px 45px rgb(255 174 174 / 81%)
+    box-shadow:0 18px 45px rgb(255 174 174 / 88%)
 }
-.profile-info-wrapper:hover>.profile-info-wrapper{
-    box-shadow:0 20px 47px rgb(252 183 183 / 81%)
+@keyframes moreglow {
+    0% { box-shadow:0 18px 45px rgb(255 174 174 / 88%); }
+    5% { box-shadow:0 18px 45px rgb(255 176 176 / 88%); }
+    10% { box-shadow:0 18px 45px rgb(255 178 178 / 88%); }
+    15% { box-shadow:0 18px 45px rgb(255 180 180 / 88%); }
+    20% { box-shadow:0 18px 45px rgb(255 182 182 / 88%); }
+    25% { box-shadow:0 19px 46px rgb(255 184 184 / 86%); }
+    30% { box-shadow:0 19px 46px rgb(255 186 186 / 86%); }
+    30% { box-shadow:0 19px 46px rgb(255 188 188 / 86%); }
+    35% { box-shadow:0 19px 46px rgb(255 190 190 / 86%); }
+    40% { box-shadow:0 19px 46px rgb(255 192 192 / 86%); }
+    45% { box-shadow:0 19px 46px rgb(255 194 194 / 86%); }
+    50% { box-shadow:0 20px 47px rgb(255 196 196 / 84%); }
+    55% { box-shadow:0 20px 47px rgb(255 198 198 / 84%); }
+    60% { box-shadow:0 20px 47px rgb(255 200 200 / 84%); }
+    65% { box-shadow:0 20px 47px rgb(255 202 202 / 84%); }
+    70% { box-shadow:0 20px 47px rgb(255 204 204 / 84%); }
+    75% { box-shadow:0 21px 48px rgb(255 206 206 / 82%); }
+    80% { box-shadow:0 21px 48px rgb(255 208 208 / 82%); }
+    85% { box-shadow:0 21px 48px rgb(255 210 210 / 82%); }
+    90% { box-shadow:0 21px 48px rgb(255 212 212 / 82%); }
+    95% { box-shadow:0 21px 48px rgb(255 214 214 / 82%); }
+    100% { box-shadow:0 22px 49px rgb(255 216 216 / 82%) }
+}
+.profile-info-wrapper:hover {
+    animation: moreglow .4s;
+    box-shadow:0 22px 49px rgb(255 216 216 / 82%)
 }
 .profile-info-wrapper.profile-info-wrapper-dark{
     color:#ff9999;
@@ -826,7 +851,14 @@ figcaption{
     border-radius:50%;
     align-items:flex-end;
     overflow:hidden;
-    box-shadow:0 8px 40px rgb(255 156 156 / 55%)
+    box-shadow:0 8px 40px rgb(255 174 174 / 88%)
+}
+.profile-image-wrapper:hover {
+    animation: moreglow .3s;
+    box-shadow:0 22px 49px rgb(255 216 216 / 80%)
+}
+.profile-image:hover>.profile-image-wrapper{
+    transform: translateY(-5);
 }
 .profile-image-wrapper.profile-image-wrapper-msim{
     width:120px;

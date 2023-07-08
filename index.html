@@ -107,7 +107,7 @@ Admin@Rarpvp</p>
 function GetStatus() {
   let i = 0;
   setTimeout(function() {
-    fetch("https://getting-status.mczgodpiggy.repl.co").then(d => d.json())
+    fetch("https://getting-status.mczgodpiggy.repl.co")
     .then(d => d.json())
     .then(d => {
       if (d.status == "dnd") {

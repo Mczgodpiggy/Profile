@@ -854,11 +854,14 @@ figcaption{
     box-shadow:0 8px 40px rgb(255 174 174 / 88%)
 }
 .profile-image-wrapper:hover {
+    webkit-transform: translateY(-5px);
+    transform: translateY(-5px);
     animation: moreglow .3s;
     box-shadow:0 22px 49px rgb(255 216 216 / 80%)
 }
-.profile-image:hover>.profile-image-wrapper{
-    transform: translateY(-5);
+.profile-image-wrapper{
+    -webkit-transition:transform .5s cubic-bezier(0.21, 0.18, 0.23, 0.96);
+    transition:transform .5s cubic-bezier(0.21, 0.18, 0.23, 0.96);
 }
 .profile-image-wrapper.profile-image-wrapper-msim{
     width:120px;

@@ -859,9 +859,16 @@ figcaption{
     animation: moreglow .3s;
     box-shadow:0 22px 49px rgb(255 216 216 / 80%)
 }
-.profile-image-wrapper{
+.profile-image-wrapper,.profile-name,.profile-bio,.profile-location-box{
     -webkit-transition:transform .5s cubic-bezier(0.21, 0.18, 0.23, 0.96);
     transition:transform .5s cubic-bezier(0.21, 0.18, 0.23, 0.96);
+}
+.profile-name:hover,.profile-name:hover,.profile-bio:hover,.profile-location-box:hover {
+    webkit-transform: translateY(-5px);
+    transform: translateY(-5px);
+}
+.profile-location-box,.profile-name,.profile-bio {
+    cursor: default
 }
 .profile-image-wrapper.profile-image-wrapper-msim{
     width:120px;

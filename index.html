@@ -113,13 +113,15 @@ function GetStatus() {
     .then(d => {
       if (d.status == "dnd") {
 	      document.getElementById("Profile-name").innerHTML = "&#x2764;Mczgodpiggy"
+	      document.getElementById("Profile-name").style.color = "#a80000"
       }
       if (d.status == "online") {
 	      document.getElementById("Profile-name").innerHTML = "&#x1F49A;Mczgodpiggy"
+	      document.getElementById("Profile-name").style.color = "#6bc900"
       }
       if (d.status == "idle" || d.status == "offline") {
 	      document.getElementById("Profile-name").innerHTML = "&#x1F5A4;Mczgodpiggy"
-		  document.getElementById("Profile-name").color = "#ff9999"
+	      document.getElementById("Profile-name").style.color = "#ff9999"
       }
     })
     i++

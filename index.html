@@ -112,13 +112,13 @@ function GetStatus() {
     .then(d => d.json())
     .then(d => {
       if (d.status == "dnd") {
-	      document.getElementById("Profile-name").innerHTML = "�Mczgodpiggy"
+	      document.getElementById("Profile-name").innerHTML = "&#x2764;Mczgodpiggy"
       }
       if (d.status == "online") {
-	      document.getElementById("Profile-name").innerHTML = "�Mczgodpiggy"
+	      document.getElementById("Profile-name").innerHTML = "&#x1F49A;Mczgodpiggy"
       }
       if (d.status == "idle" || d.status == "offline") {
-	      document.getElementById("Profile-name").innerHTML = "�Mczgodpiggy"
+	      document.getElementById("Profile-name").innerHTML = "&#x1F5A4;Mczgodpiggy"
 		  document.getElementById("Profile-name").color = "#ff9999"
       }
     })

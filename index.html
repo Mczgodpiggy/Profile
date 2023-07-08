@@ -41,7 +41,7 @@ Admin@Rarpvp">
 </div></div>
 <div class="profile-info-bottom-wrapper">
 <div class="profile-name-wrapper">
-<h1 class="profile-name">Mczgodpiggy</h1>
+<h1 class="profile-name" id="Profile-name">Mczgodpiggy</h1>
 </div>
 <div class="profile-location-box">
 <img src="cdn-sub/images/map-pin.svg" alt="Location" class="location-icon">
@@ -103,4 +103,24 @@ Admin@Rarpvp</p>
 <script src="jquery-3.7.0.min.js" ></script><script>window.jQuery||document.write('<script src="js/jquery-3.7.0.js"><\/script>')</script>
 <script src="js/page.js"></script>
 <script src="js/prefetch.js" type="module"></script>
+<script>
+function GetStatus() {
+  setTimeout(function() {
+    fetch("https://getting-status.mczgodpiggy.repl.co").then(d => d.json())
+    .then(d => d.json())
+    .then(d => {
+      if (d.status == "dnd") {
+	      document.getElementById("Profile-name").innerHTML = "�Mczgodpiggy"
+      }
+      if (d.status == "online") {
+	      document.getElementById("Profile-name").innerHTML = "�Mczgodpiggy"
+      }
+      if (d.status == "idle" || d.status == "offline") {
+	      document.getElementById("Profile-name").innerHTML = "�Mczgodpiggy"
+		  document.getElementById("Profile-name").color = "#ff9999"
+      }
+    })
+  }, 50000)
+}
+</script>
 </html>

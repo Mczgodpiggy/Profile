@@ -5331,17 +5331,20 @@ figcaption{
     position:relative;
     border-radius:8%
 }
-.contact-button:hover{
-    border-color:#ff9999
+.contact-button:hover {
+    border-color:#ff9999;
 }
-.contact-button:focus{
+.contact-button:focus {
     border:1px solid #ff9999
 }
 .contact-button.contact-button-dark{
     color:#000001;
     border-color:#e4e4e4
 }
-.contact-button.contact-button-dark:hover{
+.contact-button:hover {
+    color: #ffbaba
+}
+.contact-button.contact-button-dark:hover {
     border-color:#ff9999;
     box-shadow: 4px 4px 2px 2px #ff9999
 }
@@ -5350,7 +5353,7 @@ figcaption{
     border-style:none;
     padding:11px 14px 10px
 }
-.contact-button.contact-button-colorful:hover{
+.contact-button.contact-button-colorful:hover {
     background-color:#7100d9
 }
 .contact-button.contact-button-colorful.contact-button-colorful-dark{

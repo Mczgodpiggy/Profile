@@ -683,6 +683,52 @@ figcaption{
     5% { box-shadow:0 21px 48px rgb(255 214 214 / 82%); }
     0% { box-shadow:0 22px 49px rgb(255 216 216 / 82%) }
 }
+@keyframes buttonTextOn {
+    0% { color: #000001 }
+    5% { color: #0f0b0b }
+    10% { color: #201818 }
+    15% { color: #322626 }
+    20% { color: #3f3131 }
+    25% { color: #4e3d3d }
+    30% { color: #574444 }
+    35% { color: #644e4e }
+    40% { color: #6d5555 }
+    45% { color: #7b6161 }
+    50% { color: #7e6565 }
+    55% { color: #836a6a }
+    60% { color: #8c7171 }
+    65% { color: #997c7c }
+    70% { color: #a68888 }
+    75% { color: #b49595 }
+    80% { color: #c3a3a3 }
+    85% { color: #d2b1b1 }
+    90% { color: #e3c1c1 }
+    95% { color: #f6d2d2 }
+    100% { color: #ffbaba }
+}
+@keyframes buttonTextOff {
+    100% { color: #000001 }
+    95% { color: #0f0b0b }
+    90% { color: #201818 }
+    85% { color: #322626 }
+    80% { color: #3f3131 }
+    75% { color: #4e3d3d }
+    70% { color: #574444 }
+    65% { color: #644e4e }
+    60% { color: #6d5555 }
+    55% { color: #7b6161 }
+    50% { color: #7e6565 }
+    45% { color: #836a6a }
+    40% { color: #8c7171 }
+    35% { color: #997c7c }
+    30% { color: #a68888 }
+    25% { color: #b49595 }
+    20% { color: #c3a3a3 }
+    15% { color: #d2b1b1 }
+    10% { color: #e3c1c1 }
+    5% { color: #f6d2d2 }
+    0% { color: #ffbaba }
+}
 .profile-info-wrapper:hover {
     animation: moreglow .2s;
     box-shadow:0 22px 49px rgb(255 216 216 / 82%)
@@ -5329,10 +5375,8 @@ figcaption{
     transition:all .2s;
     display:flex;
     position:relative;
-    border-radius:8%
-}
-.contact-button:hover {
-    border-color:#ff9999;
+    border-radius:8%;
+    animation: buttonTextOff .318s;
 }
 .contact-button:focus {
     border:1px solid #ff9999
@@ -5342,6 +5386,8 @@ figcaption{
     border-color:#e4e4e4
 }
 .contact-button:hover {
+    animation: buttonTextOn .228s;
+    border-color:#ff9999;
     color: #ffbaba
 }
 .contact-button.contact-button-dark:hover {

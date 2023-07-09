@@ -15296,6 +15296,15 @@ input,textarea{
 .seated-event-row:nth-child(n+6),.seated-follow-box{
     display:none
 }
+.quote {
+    transition:all .3s;
+    color: #ffbaba
+}
+.quote:hover {
+    transition:all .3s;
+    color: #ff9999;
+    box-shadow: 0 18 25 rgb(255 176 176 / 88%);
+}
 @media screen and (max-width:414px){
     .rich-media-wrapper.rich-media-wrapper-tweet{
         min-height:178px

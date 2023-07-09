@@ -44,6 +44,9 @@ Admin@Rarpvp">
 <div class="profile-name-wrapper">
 <h1 class="profile-name" id="Profile-name">Mczgodpiggy</h1>
 </div>
+<div class="status-wrapper>
+  <h2 id="status" class="status"></h2>
+</div>
 <div class="profile-location-box">
 <img src="cdn-sub/images/map-pin.svg" alt="Location" class="location-icon">
 <div class="profile-location-text">Taiwan</div>
@@ -143,6 +146,10 @@ function GetStatus() {
 	      document.getElementById("Profile-name").innerHTML = "&#x1F5A4;Mczgodpiggy"
 	      document.getElementById("Profile-name").style.color = "#ff9999"
       }
+	  if (d.game[0]) {
+		  let game = game[0]
+		  document.getElementById("status").innerHTML = `${game.emoji.identifier} + ${game.state}`
+	  }
     })
     i++
     if (i < 8) {

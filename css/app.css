@@ -15297,13 +15297,13 @@ input,textarea{
     display:none
 }
 .quote {
-    transition:color .15s;
-    color: #ffbaba
+    transition:all .3s;
+    color: #ffbaba;
+    font-family: Chillax
 }
 .quote:hover {
-    transition:color .15s;
+    transition:all .3s;
     color: #ff9999;
-    box-shadow: 0 18 25 rgb(255 176 176 / 88%);
 }
 @media screen and (max-width:414px){
     .rich-media-wrapper.rich-media-wrapper-tweet{

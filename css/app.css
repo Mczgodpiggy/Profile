@@ -15297,11 +15297,11 @@ input,textarea{
     display:none
 }
 .quote {
-    transition:all .3s;
+    transition:color .15s;
     color: #ffbaba
 }
 .quote:hover {
-    transition:all .3s;
+    transition:color .15s;
     color: #ff9999;
     box-shadow: 0 18 25 rgb(255 176 176 / 88%);
 }

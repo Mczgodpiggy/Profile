@@ -15310,7 +15310,12 @@ input,textarea{
     margin-bottom:15px;
     box-shadow: 0px 0px 8px 8px #ff9999,
                 0px 0px 18px 16px #6100bb;
-    background-color: #ff9999
+    background-color: #ff9999;
+}
+.status-hide {
+    box-shadow: none;
+    background-color: #333;
+    visibility: hidden
 }
 .status {
     -webkit-transition:transform .5s cubic-bezier(0.21, 0.18, 0.23, 0.96);

@@ -128,6 +128,30 @@ for you to choose."
 <script src="js/page.js"></script>
 <script src="js/prefetch.js" type="module"></script>
 <script>
+fetch("https://getting-status.mczgodpiggy.repl.co")
+.then(d => d.json())
+.then(d => {
+    if (d.status == "dnd") {
+	    document.getElementById("Profile-name").innerHTML = "&#x2764;Mczgodpiggy"
+	    document.getElementById("Profile-name").style.color = "#a80000"
+    }
+    if (d.status == "online") {
+	    document.getElementById("Profile-name").innerHTML = "&#x1F49A;Mczgodpiggy"
+	    document.getElementById("Profile-name").style.color = "#6bc900"
+    }
+    if (d.status == "idle" || d.status == "offline") {
+	    document.getElementById("Profile-name").innerHTML = "&#x1F5A4;Mczgodpiggy"
+	    document.getElementById("Profile-name").style.color = "#ff9999"
+    }
+	if (d.game[0]) {
+		let game = d.game[0]
+		document.getElementById("status-wrapper").classList.replace("status-hide", "status-wrapper")
+		document.getElementById("status").innerHTML = `${game.emoji.name} ${game.state}`
+	} else {
+		document.getElementById("status").innerHTML = ""
+		document.getElementById("status-wrapper").classList.replace("status-wrapper", "status-hide")
+	}
+})
 function GetStatus() {
   let i = 0;
   setTimeout(function() {

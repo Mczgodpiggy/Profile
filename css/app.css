@@ -15315,7 +15315,8 @@ input,textarea{
 .status-hide {
     box-shadow: none;
     background-color: #333;
-    visibility: hidden
+    visibility: hidden;
+    content-visibility:hidden
 }
 .status {
     -webkit-transition:transform .5s cubic-bezier(0.21, 0.18, 0.23, 0.96);

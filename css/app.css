@@ -929,7 +929,7 @@ figcaption{
     animation: moreglow .3s;
     box-shadow:0 22px 49px rgb(255 216 216 / 80%)
 }
-.profile-image-wrapper,.profile-name,.profile-bio,.profile-location-box{
+.profile-bio,.profile-location-box{
     -webkit-transition:transform .5s cubic-bezier(0.21, 0.18, 0.23, 0.96);
     transition:transform .5s cubic-bezier(0.21, 0.18, 0.23, 0.96);
 }
@@ -15318,9 +15318,9 @@ input,textarea{
     visibility: hidden;
     content-visibility:hidden
 }
-.status {
-    -webkit-transition:transform .5s cubic-bezier(0.21, 0.18, 0.23, 0.96);
-    transition:transform .5s cubic-bezier(0.21, 0.18, 0.23, 0.96);
+.status,.profile-name,.profile-image-wrapper {
+    -webkit-transition:transform .5s cubic-bezier(0.53, -1.28, 0.67, 2.18);
+    transition:transform .5s cubic-bezier(0.53, -1.28, 0.67, 2.18);
 }
 .status:hover {
     webkit-transform: translateY(-5px);

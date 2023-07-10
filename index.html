@@ -148,11 +148,11 @@ function GetStatus() {
       }
 	  if (d.game[0]) {
 		  let game = d.game[0]
-		  document.getElementById("status-wrapper").classList.remove = "status-hide"
+		  document.getElementById("status-wrapper").classList.replace("status-hide", "status-wrapper")
 		  document.getElementById("status").innerHTML = `${game.emoji.name} ${game.state}`
 	  } else {
 		  document.getElementById("status").innerHTML = ""
-		  document.getElementById("status-wrapper").classList.add = "status-hide"
+		  document.getElementById("status-wrapper").classList.replace("status-wrapper", "status-hide")
 	  }
     })
     i++

@@ -51,6 +51,14 @@ Admin@Rarpvp">
 <img src="cdn-sub/images/map-pin.svg" alt="Location" class="location-icon">
 <div class="profile-location-text">Taiwan</div>
 </div>
+<div class="preloader">
+<div class="preloader-inner">
+<div class="preloader-icon">
+<span></span>
+<span></span>
+</div>
+</div>
+</div>
 <p class="profile-bio profile-bio-dark">Professional c#, javascript developer<br>
 <br>
 Currently learning c++, java, koltin<br>
@@ -128,6 +136,17 @@ for you to choose."
 <script src="js/page.js"></script>
 <script src="js/prefetch.js" type="module"></script>
 <script>
+window.onload = function() {
+    console.log('ඩ');
+    window.setTimeout(fade_out, 100);
+};
+function fade_out() {
+    document.querySelector('.preloader').classList.add('hidden');
+    window.setTimeout(()=>{
+        document.querySelector('.preloader').style.display = "none";
+    }
+    , 800);
+}
 fetch("https://getting-status.mczgodpiggy.repl.co")
 .then(d => d.json())
 .then(d => {

@@ -143,7 +143,7 @@ fetch("https://getting-status.mczgodpiggy.repl.co")
 	    document.getElementById("Profile-name").innerHTML = "&#x1F5A4;Mczgodpiggy"
 	    document.getElementById("Profile-name").style.color = "#ff9999"
     }
-	if (d.game[0]) {
+	if (d.game[0].type == "CUSTOM_STATUS") {
 		let game = d.game[0]
 		document.getElementById("status-wrapper").classList.replace("status-hide", "status-wrapper")
 		document.getElementById("status").innerHTML = `${game.emoji.name} ${game.state}`

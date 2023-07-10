@@ -15306,6 +15306,8 @@ input,textarea{
     color: #ff9999;
 }
 .status-wrapper {
+    -webkit-transition:transform .5s cubic-bezier(0.21, 0.18, 0.23, 0.96);
+    transition:transform .5s cubic-bezier(0.21, 0.18, 0.23, 0.96);
     cursor: default;
     margin-bottom:15px;
     text-shadow: 0 0 #ff9999;

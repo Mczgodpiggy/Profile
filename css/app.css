@@ -15311,7 +15311,7 @@ input,textarea{
     cursor: default;
     margin-bottom:15px;
     text-shadow: 0 0 #ff9999;
-    box-shadow: 0px 0px 1px 1px #ff9999
+    box-shadow: 0px 0px 16px 8px #ff9999
 }
 .status:hover {
     webkit-transform: translateY(-5px);

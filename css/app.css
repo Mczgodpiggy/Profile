@@ -15330,52 +15330,6 @@ input,textarea{
     webkit-transform: translateY(-5px);
     transform: translateY(-5px);
 }
-.loading {
-  display: inline-block;
-  position: relative;
-  width: 80px;
-  height: 80px;
-}
-.loading div {
-  position: absolute;
-  border: 4px solid #fff;
-  opacity: 1;
-  border-radius: 50%;
-  animation: load 3s cubic-bezier(0, 0.2, 0.8, 1) infinite;
-}
-.loading div:nth-child(2) {
-  animation-delay: -0.5s;
-}
-@keyframes load {
-  0% {
-    top: 36px;
-    left: 36px;
-    width: 0;
-    height: 0;
-    opacity: 0;
-  }
-  4.9% {
-    top: 36px;
-    left: 36px;
-    width: 0;
-    height: 0;
-    opacity: 0;
-  }
-  5% {
-    top: 36px;
-    left: 36px;
-    width: 0;
-    height: 0;
-    opacity: 1;
-  }
-  100% {
-    top: 0px;
-    left: 0px;
-    width: 72px;
-    height: 72px;
-    opacity: 0;
-  }
-}
 .align-left {
     text-align: left
 }
@@ -15434,12 +15388,17 @@ input,textarea{
     animation-delay: -.05s;
     -webkit-animation-delay: -.35s
 }
-
+.loaded {
+    animation: vortex-out .88s 1 linear; animation-fill-mode: forwards;transform: matrix(1,0,0,1,0,0);opacity: 1;
+}
+.whenLoaded {
+    animation: fall-in 1s 1 ease-out; animation-fill-mode: forwards;transform: matrix(1,0,0,1,0,-49.75);opacity: 0; 
+}
 @keyframes preloader-fx {
     0% {
         -webkit-transform: scale(0,0);
         transform: scale(0,0);
-        opacity: .8
+        opacity: .5
     }
 
     100% {
@@ -15448,7 +15407,6 @@ input,textarea{
         opacity: 0
     }
 }
-
 @-webkit-keyframes preloader-fx {
     0% {
         -webkit-transform: scale(0,0);
@@ -15459,6 +15417,45 @@ input,textarea{
         -webkit-transform: scale(1,1);
         opacity: 0
     }
+}
+@keyframes vortex-out {
+  0% {
+    animation-timing-function: cubic-bezier(0.3, 0, 1, 0.7);
+    transform: rotate(0deg) scale(1);
+    opacity: 1
+  }
+  100% { transform: rotate(-1800deg) scale(0.3); opacity: 0; }
+}
+@keyframes fall-in {
+  0% {
+    animation-timing-function: cubic-bezier(0.7815,0.1815,0.7831,0.7206);
+    transform: translate(0%,-49.75%);
+    opacity: 0;
+  }
+  31% {
+    animation-timing-function: cubic-bezier(0.1707,0.3173,0.3345,0.9041);
+    transform: translate(0%,-2.65%);
+    opacity: 1;
+  }
+  51% {
+    animation-timing-function: cubic-bezier(0.6191,0.1797,0.7336,0.6732);
+    transform: translate(0%,-20%);
+    opacity: 1;
+  }
+  72% {
+    animation-timing-function: cubic-bezier(0.2345,0.4707,0.453,1);
+    transform: translate(0%,-1.05%);
+    opacity: 1;
+  }
+  87% {
+    animation-timing-function: cubic-bezier(0.53,0.1845,0.7541,0.5953);
+    transform: translate(0%,-7.9%);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(0%,0%);
+    opacity: 1;
+  }
 }
 @media screen and (max-width:414px){
     .rich-media-wrapper.rich-media-wrapper-tweet{

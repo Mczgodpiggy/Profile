@@ -1,5 +1,5 @@
 body: {
-    cursor: url('../images/plus.png'),auto;
+    cursor: url('/images/plus.png'),auto;
 }
 .w-checkbox{
     margin-bottom:5px;
@@ -15306,12 +15306,15 @@ input,textarea{
     color: #ff9999;
 }
 .status-wrapper {
-    -webkit-transition:transform .5s cubic-bezier(0.21, 0.18, 0.23, 0.96);
-    transition:transform .5s cubic-bezier(0.21, 0.18, 0.23, 0.96);
     cursor: default;
     margin-bottom:15px;
-    text-shadow: 0 0 #ff9999;
-    box-shadow: 0px 0px 16px 8px #ff9999
+    box-shadow: 0px 0px 8px 8px #ff9999,
+                0px 0px 18px 16px #6100bb;
+    background-color: #ff9999
+}
+.status {
+    -webkit-transition:transform .5s cubic-bezier(0.21, 0.18, 0.23, 0.96);
+    transition:transform .5s cubic-bezier(0.21, 0.18, 0.23, 0.96);
 }
 .status:hover {
     webkit-transform: translateY(-5px);

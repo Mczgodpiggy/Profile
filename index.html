@@ -138,7 +138,9 @@ for you to choose."
 <script>
 window.onload = function() {
     console.log('ඩ');
-    window.setTimeout(fade_out, 100);
+    setTimeout(() => {
+	    window.setTimeout(fade_out, 100);
+    }, 180)
 };
 function fade_out() {
     document.querySelector('.preloader').classList.add('hidden');

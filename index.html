@@ -144,7 +144,7 @@ window.onload = function() {
 };
 function fade_out() {
     document.querySelector('.page-wrapper').style.display = "none";
-    document.querySelector('.preloader').classList.add('loaded');
+    document.querySelector('.preloader').classList.add('hidden');
     setTimeout(() => {
       document.querySelector('.page-wrapper').style.display = "";
       document.querySelector('.page-wrapper').classList.add('whenLoaded');

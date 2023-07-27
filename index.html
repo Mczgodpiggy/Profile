@@ -209,6 +209,10 @@ function GetStatus() {
 		  document.getElementById("status").innerHTML = ""
 		  document.getElementById("status-wrapper").classList.replace("status-wrapper", "status-hide")
 	  }
+	  if (d.game[1]) {
+		  let activity = d.game[1]
+		  console.log(`https://cdn.discordapp.com/app-assets/${activity.applicationID}/${activity.largeImage}.png\nhttps://cdn.discordapp.com/app-assets/${activity.applicationID}/${activity.smallImage}.png`)
+	  }
     })
     i++
     if (i < 8) {

@@ -1,6 +1,44 @@
-body: {
-    cursor: url('../images/plus.png'),auto;
+html, body { min-height: 100vh; }
+
+#wrap {
+  height: 80vh;
+  display: flex;
 }
+
+#tilt {
+  width: 80vw;
+  margin: auto;
+  transition: all 0.5s linear;
+}
+
+.gc {
+    --x-px: calc(var(var(--x-px) * 1px));
+    --y-px: calc(var(var(--y-px) * 1px));
+    --border: 1px;
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
+.gc::before,
+.gc::after {
+    border-radius: inherit;
+    background: radial-gradient(200px circle at var(--xpx) var(--y-px), #ff999969, transparent 40%);
+}
+
+.gc::before {
+    z-index: 1;
+}
+
+.gc::after {
+    z-index: 2;
+    opacity: 0;
+    transition: opacity 0.38s linear;
+}
+
+.gc:hover::after {
+    opacity: 1;
+}
+
 .w-checkbox{
     margin-bottom:5px;
     padding-left:20px;

@@ -10,17 +10,51 @@ const settings = {
   axis: "",
 };
 
+function getWidth() {
+  return Math.max(
+    document.body.scrollWidth,
+    document.documentElement.scrollWidth,
+    document.body.offsetWidth,
+    document.documentElement.offsetWidth,
+    document.documentElement.clientWidth
+  );
+}
+
+function getHeight() {
+  return Math.max(
+    document.body.scrollHeight,
+    document.documentElement.scrollHeight,
+    document.body.offsetHeight,
+    document.documentElement.offsetHeight,
+    document.documentElement.clientHeight
+  );
+}
+
 elWrap.style.perspective = `${settings.perspective}px`;
+let hovering = false
+
+const hover = (event) => {
+  hovering = true
+  console.log(hovering)
+}
+
+const nothover = (event) => {
+  hovering = false
+  console.log(hovering)
+}
 
 const tilt = (event) => {
   const bcr = elWrap.getBoundingClientRect();
   const x = Math.min(1, Math.max(0, (event.clientX - bcr.left) / bcr.width));
   const y = Math.min(1, Math.max(0, (event.clientY - bcr.top) / bcr.height));
   let reverse = 0.2
-  if (event.clientX > window.screen.width / 2) reverse = 0.2
-  if (event.clientX < window.screen.width / 2) reverse = -0.2
+  if (event.clientX > window.innerWidth / 2) {
+    reverse = 0.2
+  } else {
+    reverse = -0.2
+  }
   const tiltX = reverse * (settings.max - x * settings.max / 4);
-  const tiltY = reverse * (y * settings.max - settings.max / 6);
+  const tiltY = reverse * (y * settings.max - settings.max / 5);
   elTilt.style.transform = `
     rotateX(${settings.axis === "x" ? 0 : tiltY}deg)
     rotateY(${settings.axis === "y" ? 0 : tiltX}deg)
@@ -29,3 +63,5 @@ const tilt = (event) => {
 }
 
 elWrap.addEventListener("pointermove", tilt);
+elTilt.addEventListener("onmouseover", hover);
+elTilt.addEventListener("onmouseleave", nothover);

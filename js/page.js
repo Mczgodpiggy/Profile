@@ -3,6 +3,7 @@ const el = (sel, par) => (par || document).querySelector(sel);
 
 const elWrap = el("#wrap");
 const elTilt = el("#tilt");
+const elGlow = document.querySelectorAll("#tilt")
 const settings = {
   max: 20,
   perspective: 1000,
@@ -65,3 +66,10 @@ const tilt = (event) => {
 elWrap.addEventListener("pointermove", tilt);
 elTilt.addEventListener("onmouseover", hover);
 elTilt.addEventListener("onmouseleave", nothover);
+elTilt.addEventListener("pointermove", (mouse) => {
+  elGlow.forEach((el) => {
+    const bcr = el.getBoundingClientRect();
+    elTilt.style.setProperty("--x", mouse.clientX - bcr.left)
+    elTilt.style.setProperty("--y", mouse.clientY - bcr.top)
+  })
+})

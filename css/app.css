@@ -1,14 +1,62 @@
 html, body { min-height: 100vh; }
 
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  position: relative;
+}
+
 #wrap {
-  height: 88vh;
+  height: 80vh;
   display: flex;
 }
 
+
+
 #tilt {
-  width: 80vw;
-  margin: auto;
-  transition: all 0.5s linear;
+    --x-px: calc(var(--x) * 1px);
+    --y-px: calc(var(--y) * 1px);
+    --border: 0px;
+    width: 80vw;
+    margin: auto;
+    transition: all 0.5s linear;
+    display: grid;
+    &:before, &:after {
+        content: "";
+        display: block;
+        overflow: hidden;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        border-radius: inherit;
+        background: radial-gradient(280px circle at var(--x-px) var(--y-px), rgba(255, 153, 153, 0.269), transparent 38%);
+    }
+
+    &:before {
+        z-index: 1;
+    }
+
+    &:after {
+        opacity: 0;
+        z-index: 2;
+        transition: opacity 0.269s linear;
+    }
+
+    &:hover:after {
+        opacity: 1;
+    }
+}
+
+.profile-info-top-wrapper {
+    z-index: 1;
+}
+
+.contact-button {
+    z-index: 1;
 }
 
 .gc {

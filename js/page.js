@@ -3,7 +3,7 @@ const el = (sel, par) => (par || document).querySelector(sel);
 
 const elWrap = el("#wrap");
 const elTilt = el("#tilt");
-const elGlow = document.querySelectorAll("#tilt")
+const elGlow = document.querySelectorAll(".profile-info-wrapper")
 const settings = {
   max: 20,
   perspective: 1000,

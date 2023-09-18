@@ -13,15 +13,11 @@ html, body { min-height: 100vh; }
   display: flex;
 }
 
-
-
-#tilt {
+.profile-info-wrapper {
     --x-px: calc(var(--x) * 1px);
     --y-px: calc(var(--y) * 1px);
     --border: 0px;
     padding-bottom: 50px;
-    width: 80vw;
-    margin: auto;
     transition: all 0.5s linear;
     display: grid;
     &:before, &:after {
@@ -51,6 +47,12 @@ html, body { min-height: 100vh; }
     &:hover:after {
         opacity: 1;
     }
+}
+
+#tilt {
+    width: 80vw;
+    margin: auto;
+    transition: all 0.5s linear;
 }
 
 .profile-info-top-wrapper {
